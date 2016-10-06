@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  api:
+    labels:
+      - "com.microsoft.visualstudio.targetoperatingsystem=linux"
+    environment:
+      - ASPNETCORE_URLS=http://+80;http://localhost:8080
+    volumes:
+      - ~/clrdbg:/clrdbg:ro
+    entrypoint: tail -f /dev/null
